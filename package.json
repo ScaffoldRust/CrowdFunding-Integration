@@ -1,0 +1,24 @@
+{
+	"name": "my-bun-monorepo",
+	"private": true,
+	"packageManager": "bun@1.1.0",
+	"workspaces": [
+		"apps/*"
+	],
+	"scripts": {
+		"dev:web": "cd apps/web && bun dev",
+		"build:web": "cd apps/web && bun run build",
+		"lint": "biome check .",
+		"format": "biome format --write .",
+		"format-and-lint:fix": "biome format --write . && biome check --write .",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.1.4",
+		"@commitlint/config-conventional": "^19.8.1",
+		"commitlint": "^19.8.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.5",
+		"typescript": "^5.9.2"
+	}
+}

@@ -1,0 +1,4 @@
+bun format-and-lint:fix
+git update-index --again
+# ? No true test applied for now. Disable the following line to enable testing when first round of tests are added.
+# bun test
