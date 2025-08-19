@@ -41,8 +41,11 @@ export default function ProgressTracker({
 			{/* Progress bar */}
 			<div className="w-full bg-gray-200 rounded-full h-2 mb-6">
 				<div
-					className="bg-green-600 h-2 rounded-full transition-all duration-300 ease-out"
-					style={{ width: `${progressPercentage}%` }}
+					className="h-2 rounded-full transition-all duration-300 ease-out"
+					style={{
+						width: `${progressPercentage}%`,
+						backgroundColor: '#176700',
+					}}
 				/>
 			</div>
 
@@ -57,19 +60,20 @@ export default function ProgressTracker({
 							type="button"
 							onClick={() => handleStepClick(index)}
 							className={`
-                flex flex-col items-start px-4 py-3 rounded-lg text-left transition-all duration-200
+                flex flex-col items-center px-4 py-3 rounded-lg text-center transition-all duration-200
                 ${
 									isActive
-										? 'bg-green-600 text-white'
+										? 'text-white hover:opacity-90'
 										: 'bg-gray-100 text-gray-700 hover:bg-gray-150'
 								}
                 cursor-pointer flex-shrink-0 min-w-[120px] max-w-[160px] flex-grow
               `}
+							style={isActive ? { backgroundColor: '#176700' } : {}}
 						>
 							<span className={`font-medium text-sm ${isActive ? 'text-white' : 'text-gray-900'}`}>
 								{step.title}
 							</span>
-							<span className={`text-xs mt-1 ${isActive ? 'text-green-100' : 'text-gray-500'}`}>
+							<span className={`text-xs mt-1 ${isActive ? 'text-green-50' : 'text-gray-500'}`}>
 								{step.subtitle}
 							</span>
 						</button>
