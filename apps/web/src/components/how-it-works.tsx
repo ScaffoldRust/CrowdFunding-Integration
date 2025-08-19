@@ -1,5 +1,3 @@
-'use client'
-
 import { ArrowRight, Heart, Lightbulb, Users } from 'lucide-react'
 import type React from 'react'
 import { Badge } from '@/components/ui/badge'
@@ -133,7 +131,7 @@ export function HowItWorks() {
 				<div className="text-center">
 					<Button
 						size="lg"
-						className="bg-white hover:bg-gray-50 text-gray-900 border-0 shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-3 text-base font-medium"
+						className="bg-white hover:bg-gray-50 text-gray-900 border-0 shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-3 text-base font-medium rounded-2xl"
 					>
 						Learn More About Our Process
 						<ArrowRight className="ml-2 w-4 h-4" />
