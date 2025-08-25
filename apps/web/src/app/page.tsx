@@ -1,9 +1,11 @@
-import { HowItWorks } from '@/components/how-it-works'
+import { Footer } from '@/components/landing/footer'
+import { Header } from '@/components/landing/header'
 
 export default function Home() {
 	return (
-		<main className="min-h-screen">
-			<HowItWorks />
+		<main>
+			<Header />
+			<Footer />
 		</main>
 	)
 }
