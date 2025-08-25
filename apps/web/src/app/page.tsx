@@ -1,6 +1,8 @@
 'use client'
 
 import BasicInfoForm from '@/components/forms/BasicInfoForm'
+import { Footer } from '@/components/landing/footer'
+import { Header } from '@/components/landing/header'
 
 export default function Home() {
 	const categories = [
@@ -30,10 +32,13 @@ export default function Home() {
 	}
 
 	return (
+    <main>
+    <Header />
 		<BasicInfoForm
 			categories={categories}
 			onSubmit={handleSubmit}
 			onDirtyChange={handleDirtyChange}
 		/>
-	)
+    <Footer />
+    </main>
 }
