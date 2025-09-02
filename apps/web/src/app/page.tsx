@@ -3,6 +3,7 @@
 import BasicInfoForm from '@/components/forms/BasicInfoForm'
 import { Footer } from '@/components/landing/footer'
 import { Header } from '@/components/landing/header'
+import Hero from '@/components/landing/hero'
 
 export default function Home() {
 	const categories = [
@@ -34,6 +35,7 @@ export default function Home() {
 	return (
     <main>
     <Header />
+    <Hero/>
 		<BasicInfoForm
 			categories={categories}
 			onSubmit={handleSubmit}
