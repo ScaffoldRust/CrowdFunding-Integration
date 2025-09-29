@@ -33,14 +33,15 @@ export default function Home() {
 	}
 
 	return (
-    <main>
-    <Header />
-    <Hero/>
-		<BasicInfoForm
-			categories={categories}
-			onSubmit={handleSubmit}
-			onDirtyChange={handleDirtyChange}
-		/>
-    <Footer />
-    </main>
+		<main>
+			<Header />
+			<Hero />
+			<BasicInfoForm
+				categories={categories}
+				onSubmit={handleSubmit}
+				onDirtyChange={handleDirtyChange}
+			/>
+			<Footer />
+		</main>
+	)
 }
