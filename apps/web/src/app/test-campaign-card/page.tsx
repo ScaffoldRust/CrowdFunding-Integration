@@ -40,12 +40,13 @@ export default function TestCampaignCardPage() {
 			categoryColor: 'purple',
 			daysLeft: 8,
 			title: 'Community Art Gallery Project',
-			description: 'Creating a space for local artists to showcase their work and connect with the community',
+			description:
+				'Creating a space for local artists to showcase their work and connect with the community',
 			amountRaised: 120000,
 			goalAmount: 80000, // Over-funded example
 			backersCount: 324,
 			coverImageUrl: '/placeholder-campaign.jpg',
-		}
+		},
 	]
 
 	const handleViewProject = (id: string) => {
@@ -57,15 +58,12 @@ export default function TestCampaignCardPage() {
 		<div className="min-h-screen bg-gray-50 py-8">
 			<div className="container mx-auto px-4">
 				<h1 className="text-3xl font-bold text-gray-900 mb-8">CampaignCard Component Test</h1>
-				
+
 				{/* Single card matching the design */}
 				<section className="mb-12">
 					<h2 className="text-xl font-semibold mb-4">Design Match - Ocean Cleanup Project</h2>
 					<div className="max-w-sm">
-						<CampaignCard
-							{...sampleCampaign}
-							onViewProject={handleViewProject}
-						/>
+						<CampaignCard {...sampleCampaign} onViewProject={handleViewProject} />
 					</div>
 				</section>
 
@@ -74,11 +72,7 @@ export default function TestCampaignCardPage() {
 					<h2 className="text-xl font-semibold mb-4">Responsive Grid Layout</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{campaigns.map((campaign) => (
-							<CampaignCard
-								key={campaign.id}
-								{...campaign}
-								onViewProject={handleViewProject}
-							/>
+							<CampaignCard key={campaign.id} {...campaign} onViewProject={handleViewProject} />
 						))}
 					</div>
 				</section>
@@ -95,7 +89,9 @@ export default function TestCampaignCardPage() {
 
 				{/* Default navigation (no custom handler) */}
 				<section className="mb-12">
-					<h2 className="text-xl font-semibold mb-4">Default Navigation (Link to /campaign/[id])</h2>
+					<h2 className="text-xl font-semibold mb-4">
+						Default Navigation (Link to /campaign/[id])
+					</h2>
 					<div className="max-w-sm">
 						<CampaignCard {...sampleCampaign} />
 					</div>
